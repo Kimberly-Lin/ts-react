@@ -9,6 +9,12 @@
  *
  * BoxList -> Box
  */
+interface BoxInterface {
+  id: string;
+  width: string;
+  height: string;
+  backgroundColor: string;
+}
 
 function Box({ id, width = 5, height = 5, backgroundColor, remove }) {
 

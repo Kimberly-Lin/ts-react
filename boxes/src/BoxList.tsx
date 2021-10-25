@@ -8,11 +8,18 @@ import NewBoxForm from "./NewBoxForm";
  * - boxes: [ { id, width, height, backgroundColor }, ... ]
  */
 
-function BoxList() {
-  const [boxes, setBoxes] = useState([])
+interface BoxInterface {
+  id: string;
+  width: number;
+  height: number;
+  backgroundColor: string;
+}
+
+function BoxList(): JSX.Element {
+  const [boxes, setBoxes] = useState<BoxInterface[] | []>([])
 
   /** add box with given { id, width, height, backgroundColor } */
-  function add(newBox) {
+  function add(newBox: BoxInterface): void {
     setBoxes(boxes => [...boxes, newBox]);
   }
 
