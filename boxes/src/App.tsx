@@ -1,6 +1,14 @@
 import BoxList from "./BoxList";
 
-function App() {
+/** Renders the app wrapper
+ * 
+ * Props: none
+ * 
+ * State: none
+ * 
+ * Context: none
+ */
+function App(): JSX.Element {
   return (
     <div>
       <BoxList />

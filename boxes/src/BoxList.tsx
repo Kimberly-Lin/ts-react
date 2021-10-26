@@ -10,13 +10,21 @@ import NewBoxForm from "./NewBoxForm";
 
 interface BoxInterface {
   id: string;
-  width: number;
-  height: number;
+  width: string;
+  height: string;
   backgroundColor: string;
 }
 
-function BoxList(): JSX.Element {
-  const [boxes, setBoxes] = useState<BoxInterface[] | []>([])
+/** Renders a list of boxes
+ * 
+ * Props: None
+ * 
+ * State: array of boxes, each following the BoxInterface
+ * 
+ * Context: none
+ */
+function BoxList() { //Code review: Don't need JSX.Element
+  const [boxes, setBoxes] = useState<BoxInterface[]>([]) //Code review: Don't need empty array
 
   /** add box with given { id, width, height, backgroundColor } */
   function add(newBox: BoxInterface): void {
